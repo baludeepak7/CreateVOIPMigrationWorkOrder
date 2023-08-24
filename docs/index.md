@@ -108,17 +108,18 @@ Table of Contents {#table-of-contents .Heading1-NC}
 
 6 Troubleshooting 23
 
-
 Document Control
 ================
 
 Document Information
 --------------------
 
-  ------------------------------ -----------------------------------------------------------------
-  **Title**                      CreateVOIPMigrationWorkOrder (Middleware Service Specification)
-  **Author / (Last saved by)**   Saleem Khan / (Khan, Saleem)
-  **Status**                     Issued
-  ------------------------------ -----------------------------------------------------------------
+  -------------------------- ----------------------------
+  **Document Author:**       Saleem Khan 
+  **Title:**                 CreateVOIPMigrationWorkOrder (Middleware Service Specification)
+  **Status:**                Issued
+  -------------------------- ----------------------------
+
+
 
 
