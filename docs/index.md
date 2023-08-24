@@ -1,7 +1,4 @@
-![](media/image1.jpeg){width="1.5104166666666667in"
-height="1.0729166666666667in"}
-
-CreateVOIPMigrationWorkOrder
+**CreateVOIPMigrationWorkOrder**
 
 Revision: 1
 
