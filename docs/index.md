@@ -107,3 +107,164 @@ Table of Contents {#table-of-contents .Heading1-NC}
 5.3 Performance and Capacity Planning Requirements 22
 
 6 Troubleshooting 23
+
+\
+Document Control
+================
+
+Document Information
+--------------------
+
+  ------------------------------ -----------------------------------------------------------------
+  **Title**                      CreateVOIPMigrationWorkOrder (Middleware Service Specification)
+  **Author / (Last saved by)**   Saleem Khan / (Khan, Saleem)
+  **Status**                     Issued
+  ------------------------------ -----------------------------------------------------------------
+
+Document History
+----------------
+
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Version**   **Description / Change Comments**                                                                                                                                                                                                                        **Who**       **Date**
+  ------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ------------- -----------------------
+  0.1           1^st^ draft, circulated for internal review                                                                                                                                                                                                              Saleem Khan   08^th^ August 2018
+
+  0.2           Mapping Sheet updated. Service CreateWorkOrder\_V3 (R 5) is updated to be used for ‘Workorder’ creation.                                                                                                                                                 Saleem Khan   23^rd^ August 2018
+
+  0.3           Spec (along with the mapping sheet) updated after addressing DEV comments:                                                                                                                                                                               Saleem Khan   24^th^ September 2018
+                                                                                                                                                                                                                                                                                       
+                -   Workflow updated, failure from ‘CREATE\_WORKORDER’ is now only retrying itself and not going back to the previous state 'Get\_WORKORDER\_DATA’.                                                                                                                    
+                                                                                                                                                                                                                                                                                       
+                -   Configuration for workorder comments is removed from the service.                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                       
+
+  1.0           Service updated to reflect the changes to the child service ‘GetVOIPLineMigrationDetails’ (original updates ware requested due to the MIDAS design changes).                                                                                             Saleem Khan   17^th^ December 2018
+
+  1.1           Mapping Sheet Update, ‘ServiceCodeType’ changed from ‘SERVICE’ to ‘S’ as returned by the MiDaS by GetVOIPLineMigrationDetails.                                                                                                                           Saleem Khan   31^st^ January 2019
+
+  1.2           Mapping Sheet updated for ‘CreateWorkorder\_V3 (R5).                                                                                                                                                                                                     Saleem Khan   1^st^ February 2019
+
+  1.3           Mapping Sheet updated to address ‘Migration Work Order’ related issues.                                                                                                                                                                                  Saleem Khan   15^th^ February 2019
+                                                                                                                                                                                                                                                                                       
+                -   MiDaS (via ‘GetVOIPLineMigraitonDetails’ service) would send additional service and OTC codes to handle ‘EBUL devices.                                                                                                                                             
+                                                                                                                                                                                                                                                                                       
+                -   Logic for creating ‘Vulnerable Questioners’ is revised as well.                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                       
+                -   Mapping to be updated to pass an additional field (i.e. ‘prerateWorkOrder’) to the ‘CreateWorkOrder\_V3 (R5)’ service to make sure no prorate charges are applied to along with the ‘Migration Work Order’.                                                        
+                                                                                                                                                                                                                                                                                       
+
+  1.4           Mapping Sheet updated to address ‘Migration Work Order’ related issues.                                                                                                                                                                                  Saleem Khan   18^th^ February 2019
+                                                                                                                                                                                                                                                                                       
+                -   Mapping Sheet updated for OTC code.                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                       
+
+  1.5           Following Updates are made:                                                                                                                                                                                                                              Saleem Khan   28^th^ February 2019
+                                                                                                                                                                                                                                                                                       
+                -   Default vulnerability questioner is NOT to be mapped as this is already set in ‘CreateWorkOrder\_V3 (R5)’ service.                                                                                                                                                 
+                                                                                                                                                                                                                                                                                       
+                -   Timeout for the ‘CreateWorkOrder\_V3 (R5)’ is now updated from ‘3’ sec to 10 sec.                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                       
+                Note: Although we are expecting ‘CreateWorkOrder\_V3 (R5)’ service to respond in about 3 sec, this (parent Service) being an Asynchronous operation we are OK to provide more time to the child service without having an impact on the consumer APIs.                 
+
+  1.6           Questioner updated for Defect \#5216, we are now sending 'L' instead of 'H' for home phone.                                                                                                                                                              Saleem Khan   04^th^ March 2019
+
+  1.7           Value for the 'prorateWorkOrder' is now set to 'false' as requested by the solution Design.                                                                                                                                                              Saleem Khan   08^th^ March 2019
+
+  1.8           Service updated, following updates are done:                                                                                                                                                                                                             Saleem Khan   04^th^ April 2019
+                                                                                                                                                                                                                                                                                       
+                -   Workflow removed from this service.                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                       
+                -   Retry while retrieving MIDAS data removed.                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                       
+                -   Integration to the Update MIDAS service introduced.                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                       
+
+  1.9           Mapping updated for 2nd questionnaire, it is 'hasMobilePhone' to be used instead of "usesMobilePhone'.                                                                                                                                                   Saleem Khan   18^th^ April 2019
+
+  2.0           Updated the Service Mapping to consume the questionnaire returned by GetVOIPLineMigration service                                                                                                                                                        Ali Kamal     2^nd^ May 2019
+
+  2.1           Configuration updated for the MIDAS status updates                                                                                                                                                                                                       Saleem Khan   10^th^ May 2019
+  ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+SOA Governance Approval
+-----------------------
+
+***The SOA Governance Authority is required to sign off this service
+specification, and ensure that it adheres to SOA standards, before any
+further sign off can be sought.***
+
+  **Name**     **Title / Department**   **Approval (Y/N)**
+  ------------ ------------------------ --------------------
+  Steve King   SOA Governance           
+
+Where the reviewer is not approving the document explain what changes
+are needed.
+
+For Review By
+-------------
+
+  **Name**                      **Title / Department**              **Approval (Y/N)**
+  ----------------------------- ----------------------------------- --------------------
+  Steve King                    Middleware Solution Design Lead     
+  Lee Doel                      Middleware Development Lead         
+  David Mortimer                Middleware Technical Architecture   
+  Steve King                    SOA Governance Representative       
+  Andrew Zielinski              MW Support Lead                     
+  Sunil Kumar, Satheesh Kumar   Project Solution Designer           
+  VMTS Test Team                VMTS Test Team                      
+
+Where the reviewer is not approving the document explain what changes
+are needed.
+
+Distribution
+------------
+
+Distribution is to the reviewer list above plus the following:
+
+  **Name**   **Title / Department**
+  ---------- ------------------------
+             
+             
+
+References
+----------
+
+  ------------------------- ------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  **Reference**             **Document**                                **Link / Path**
+  []{#Ref01 .anchor}Ref01   SOA Principles and Policies                 [SOA Principles and Policies](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Standards/Governance/SOA%20Principles%20and%20Policies.doc)
+  []{#Ref02 .anchor}Ref02   SOA Integration Architecture                [SOA Integration Architecture](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Standards/Governance/SOA%20Integration%20Architecture.doc)
+  []{#Ref03 .anchor}Ref03   SOA Blueprint                               [SOA Blueprint](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Standards/Governance/SOA%20Solution%20Blueprint.doc)
+  []{#Ref04 .anchor}Ref04   Master Service Error Code List              [Master Error List](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Development/Master%20Service%20Error%20Code%20List.xls)
+  Ref05                     Performance Sheet                           [Performance](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Configuration%20Management/Service%20Performance%20and%20Capacity.xls)
+  Ref06                     Single Customer Migration Solution Design   [SahrePoint Link](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Project%20Documentation/21CV/21CV%20Single%20Customer%20Migration/21CV_MaD_SCM_SD_v0%205.docx)
+  Ref07                     Middleware Process Framework                [SharePoint](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Service%20Documentation/ProcessNewCustomerOrder/Middleware%20Process%20%20Framework%20-%20Requirements.doc)
+  ------------------------- ------------------------------------------- ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+***Reference any documents that are referred to within this document or
+linked to it, including the version number and where the document can be
+found. This***[[[[[]{#_Toc183235881 .anchor}]{#_Toc103152502
+.anchor}]{#_Toc103152333 .anchor}]{#_Toc103152293
+.anchor}]{#_Toc103151773 .anchor} ***list shall include all input
+documents used in its generation, such as the High Level Design,
+Detailed Business Requirements and Detailed Solution Design.***
+
+Contributors to this document
+-----------------------------
+
+The following people provided input into this document.
+
+  ---------------- ----------------------------
+  **Name**         **Role / Company**
+  Raja Ali Kamal   Middleware Solution Design
+  Fawad Sikandar   Middleware Solution Design
+  ---------------- ----------------------------
+
+Glossary
+--------
+
+  --------------------------------- --------------------------------------------------------------------
+  **Term **                         **Description**
+  Shall                             Mandatory
+  Should                            Highly desirable, but not mandatory
+  []{#_Ref252190675 .anchor}MiDaS   Migration Data Store – used to track migration related activities.
+  --------------------------------- --------------------------------------------------------------------
