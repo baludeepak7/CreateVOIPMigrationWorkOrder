@@ -114,11 +114,6 @@ Document Control
 Document Information
 --------------------
 
-  -------------------------- ----------------------------
-  **Document Author:**       Saleem Khan 
-  **Title:**                 CreateVOIPMigrationWorkOrder (Middleware Service Specification)
-  **Status:**                Issued
-  -------------------------- ----------------------------
 
 
 
