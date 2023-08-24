@@ -108,18 +108,111 @@ Table of Contents {#table-of-contents .Heading1-NC}
 
 6 Troubleshooting 23
 
-Document Control
+SOA Governance Approval
+-----------------------
+
+***The SOA Governance Authority is required to sign off this service
+specification, and ensure that it adheres to SOA standards, before any
+further sign off can be sought.***
+
+Where the reviewer is not approving the document explain what changes
+are needed.
+
+
+***Reference any documents that are referred to within this document or
+linked to it, including the version number and where the document can be
+found. This***[[[[[]{#_Toc183235881 .anchor}]{#_Toc103152502
+.anchor}]{#_Toc103152333 .anchor}]{#_Toc103152293
+.anchor}]{#_Toc103151773 .anchor} ***list shall include all input
+documents used in its generation, such as the High Level Design,
+Detailed Business Requirements and Detailed Solution Design.***
+
+Contributors to this document
+-----------------------------
+Introduction
+============
+
+Document Purpose
+----------------
+
+The Service Specification document is a subjective document which
+describes the interface, operations and implementation of a single
+service.
+
+It also serves the purpose of an as-built reference to describe the
+production service and, as such, forms part of the SOA development
+deliverables. Every service that is delivered to the SOA platform must
+have an accompanying Service Specification which describes the service.
+
+Audience
+--------
+
+This document is created for the following audience:
+
+-   Governance Team
+
+-   Design Team
+
+-   Development Team
+
+-   Testing Team
+
+-   Support Team
+
+\
+Integration Flow
 ================
 
-**\
-**[[[[]{#_Toc159915941 .anchor}]{#_Toc156645503 .anchor}]{#_Toc153600109
-.anchor}]{#_Toc153595979 .anchor}DOCUMENT INFORMATION
+The CreateVOIPMigrationWorkOrder service is part of the integration flow
+“Service Problem Management”. Please refer to the SOA Blueprint document
+\[[Ref03](#Ref03)\] for details of the flow.
 
-  -------------------------- ----------------------------
-  **Document Author:**       Saleem Khan
-  **Title:**                 <CreateVOIPMigrationWorkOrder>
-  **Status:**                Issued
-  -------------------------- ----------------------------
+ {#section-1 .ListParagraph}
 
-[[[[[]{#_Toc143240777 .anchor}]{#_Toc159915942 .anchor}]{#_Toc156645504
-.anchor}]{#_Toc153600110 .anchor}]{#_Toc153595980 .anchor}CHANGE HISTORY
+[[[[[[[[[[[[[]{#_Data_Mapping_Sheet .anchor}]{#_Invoke_OC_to
+.anchor}]{#_Validation_Rules .anchor}]{#_Service_Interface_Definition
+.anchor}]{#_REST_Service_Specification .anchor}]{#_Toc496780400
+.anchor}]{#_Toc496780399 .anchor}]{#_Toc496780398
+.anchor}]{#_Toc496780397 .anchor}]{#_Toc496780373
+.anchor}]{#_Toc496780372 .anchor}]{#_Toc496780371
+.anchor}]{#_Toc496780370 .anchor}
+
+REST Service Specification 
+===========================
+
+Service Overview
+----------------
+
+### Service Interface Definition
+
+The JSON schemas can be found in the below
+[location](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Service%20Documentation/CreateVOIPMigrationWorkOrder)
+
+-   CreateVOIPMigrationWorkOrderRequest.json
+
+-   CreateVOIPMigrationWorkOrderResponse.json
+
+The policies for RESTful interface as mentioned in Section 3 of [SOA
+Principles and
+Policies](http://sharepoint/sites/support/Technology/devsupport/solutiondesign/CCMSD/SOA/Standards/Governance/SOA%20Principles%20and%20Policies.doc)
+must be adhered to.
+
+### Revision History
+
+*This section tracks each revision of the service. This is different to
+the document version number which may be incremented many times during
+design and review stages for a particular service revision. The
+intention of the section is to clearly document the delta between
+revisions of the same service. This will only be used where the service
+has been extended in a backward compatible way.*
+
+There must at all times be a base-lined reversion of each Service
+Specification which is aligned with the latest production version of the
+physical service.
+
+There may also be one or (in the case of parallel development) more
+working copies of a Service Specification Versions and Revisions which
+have been created as part of an overall Solution Design for an objective
+purpose such as a project. As new versions and revisions of a service
+are delivered to production the relevant Service Specification would
+then become the base-lined version and replace the previous version.
