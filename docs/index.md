@@ -18,12 +18,14 @@ Workorder’.*[[]{#_Toc256000916 .anchor}]{#scroll-bookmark-2064 .anchor}
 
 ### CreateVOIPMigrationWorkOrder – POST
 
-  **Parameter Name**                    **Description**
-  ------------------------------------- --------------------------
-  telephoneNumber                       String e.g. 447874384949
-  accountIdentification                 Object
-  AccountIdentification.accountNumber   String
-  AccountIdentification.siteReference   Numeric int
+
+  telephoneNumber        (String) -     String e.g. 447874384949
+  
+  accountIdentification       (Object)  
+  
+  AccountIdentification.accountNumber   (String)  
+  
+  AccountIdentification.siteReference   (Numeric int)
 
 Response
 --------
