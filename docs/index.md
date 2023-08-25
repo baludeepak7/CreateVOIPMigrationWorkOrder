@@ -31,14 +31,17 @@ Request
 Response
 --------
 
-  **Parameter**                                      **Data Type**
-  -------------------------------------------------- ---------------
-  CreateVOIPMigrationWorkOrder                       Object
-  CreateVOIPMigrationWorkOrder.failure               Object
-  CreateVOIPMigrationWorkOrder.failure.fault         Array
-  CreateVOIPMigrationWorkOrder.success               Object
-  CreateVOIPMigrationWorkOrder.success.fault         Array
-  CreateVOIPMigrationWorkOrder.success.orderNumber   String
+  CreateVOIPMigrationWorkOrder        (Object)
+  
+  CreateVOIPMigrationWorkOrder.failure      (Object)
+  
+  CreateVOIPMigrationWorkOrder.failure.fault      (Array)
+  
+  CreateVOIPMigrationWorkOrder.success        (Object)
+  
+  CreateVOIPMigrationWorkOrder.success.fault    (Array)
+  
+  CreateVOIPMigrationWorkOrder.success.orderNumber   (String)
 
 Following parameters should NOT be ‘NULL’ or ‘BLANK’ in the post
 request:
@@ -52,7 +55,7 @@ request:
 Error response
 --------------
 
-  **Type**   **Code**   **Description**      **Severity**   **Source System**
-  ---------- ---------- -------------------- -------------- -------------------
-  SYSTEM     10686      System Exception     CRITICAL       Middleware
-  BUSINESS   10685      Business Exception   ERROR          Middleware
+  
+  SYSTEM  -    10686   -   System Exception  -   CRITICAL  -     Middleware
+  
+  BUSINESS -  10685    -  Business Exception -  ERROR      -   Middleware
