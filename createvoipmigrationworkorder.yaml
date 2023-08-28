@@ -26,6 +26,6 @@ spec:
   owner: Developer
   system: Fixed Line
   dependsOn:
-    - resource:https://github.com/baludeepak7/CreateWorKorder_V3
+- api:CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
