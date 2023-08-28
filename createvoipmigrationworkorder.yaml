@@ -29,7 +29,8 @@ spec:
   lifecycle: demo
   owner: Developer
   system: VMO2-FixedLine
-  dependsOn:
-    - CreateWorkOrderV3
+ dependsOn:
+  - kind: component
+    name: CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
