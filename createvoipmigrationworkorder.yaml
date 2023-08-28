@@ -29,7 +29,7 @@ spec:
   lifecycle: demo
   owner: Developer
   system: VMO2-FixedLine
- dependsOn:
+  dependsOn:
   - kind: API
     name: CreateWorkOrderV3
   providesApis:
