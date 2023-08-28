@@ -31,5 +31,4 @@ spec:
   system: Fixed Line
   consumesApis:
     - CreateWorkOrderV3   
-  providesApis:
-    - CreateVOIPMigrationWorkOrder
+  
