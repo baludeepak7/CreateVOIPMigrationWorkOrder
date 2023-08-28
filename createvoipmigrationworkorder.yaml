@@ -29,5 +29,8 @@ spec:
   lifecycle: demo
   owner: Developer
   system: Fixed Line
+  consumesApis:
+    - CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
+
