@@ -29,5 +29,9 @@ spec:
   lifecycle: production
   owner: Developer
   system: Fixed Line
+  consumesApis:
+    - CreateWorkOrderV3
+    - CreateEvent_V2
+    - UpdateVOIPLineMigrationStatus
   providesApis:
     - CreateVOIPMigrationWorkOrder
