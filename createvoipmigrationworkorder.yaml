@@ -33,4 +33,3 @@ spec:
     - CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
-
