@@ -8,7 +8,7 @@ spec:
   type: openapi
   owner: Developer
   lifecycle: demo
-  system: VMO2-FixedLine
+  system: Fixed Line
   definition:
     $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
     
@@ -28,6 +28,6 @@ spec:
   type: service
   lifecycle: demo
   owner: Developer
-  system: VMO2-FixedLine
+  system: Fixed Line
   providesApis:
     - CreateVOIPMigrationWorkOrder
