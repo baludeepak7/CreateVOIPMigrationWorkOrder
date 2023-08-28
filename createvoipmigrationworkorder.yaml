@@ -9,8 +9,6 @@ spec:
   owner: Developer
   lifecycle: demo
   system: Fixed Line
-  dependsOn:
-- api:CreateWorkOrderV3
   definition:
     $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
     
@@ -31,5 +29,7 @@ spec:
   lifecycle: demo
   owner: Developer
   system: Fixed Line
+  consumesApis:
+  - CreateWorKorder_V3
   providesApis:
     - CreateVOIPMigrationWorkOrder
