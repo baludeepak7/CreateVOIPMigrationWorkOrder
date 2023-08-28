@@ -30,7 +30,7 @@ spec:
   owner: Developer
   system: VMO2-FixedLine
  dependsOn:
-  - kind: component
+  - kind: API
     name: CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
