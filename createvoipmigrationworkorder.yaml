@@ -10,5 +10,5 @@ spec:
   lifecycle: demo
   system: Fixed Line
   definition:
-    $text: https://github.com/baludeepak7/CreateWorKorder_V3/blob/main/createvoipmigrationworkorder.yaml
+    $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
     
