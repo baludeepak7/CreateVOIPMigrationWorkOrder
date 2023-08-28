@@ -1,19 +1,17 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: API
 metadata:
   name: CreateVOIPMigrationWorkOrder
-  description: |
-    This is a technical service used to facilitate the Migration process (by creating a work order) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
+  description:  |
+    This is a technical service used to facilitate the Migration process (by creating a workorder) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
 spec:
   type: openapi
   owner: Developer
   lifecycle: demo
-  system: Fixed Line
-dependsOn:
-    - CreateWorkOrderV3
+  system: VMO2-FixedLine
   definition:
     $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
-
+    
 ---
 
 apiVersion: backstage.io/v1alpha1
@@ -21,17 +19,15 @@ kind: Component
 metadata:
   name: CreateVOIPMigrationWorkOrder
   description: |
-    This is a technical service used to facilitate the Migration process (by creating a work order) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
+    This is a technical service used to facilitate the Migration process (by creating a workorder) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
   annotations:
     gitlab.com/project-id: '48576071'
     sonarqube.org/project-key: com.binpipe.spboot:demo
-    backstage.io/techdocs-ref: dir: .
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: demo
   owner: Developer
-  system: Fixed Line
-dependsOn:
-    - CreateWorkOrderV3
+  system: VMO2-FixedLine
   providesApis:
     - CreateVOIPMigrationWorkOrder
