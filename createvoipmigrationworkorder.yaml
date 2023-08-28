@@ -8,7 +8,7 @@ spec:
   type: openapi
   owner: Developer
   lifecycle: demo
-  system: VMO2-FixedLine
+  system: Fixed Line
   definition:
     $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
     
@@ -19,18 +19,14 @@ kind: Component
 metadata:
   name: CreateVOIPMigrationWorkOrder
   description: |
-    This is a technical service used to facilitate the Migration process (by creating a workorder) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
-  annotations:
-    gitlab.com/project-id: '48576071'
-    sonarqube.org/project-key: com.binpipe.spboot:demo
-    backstage.io/techdocs-ref: dir:.
+    This is a technical service used to facilitate the Migration process (by creating a work order) for the customers from ‘TDM’ telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
 spec:
   type: service
   lifecycle: demo
   owner: Developer
-  system: VMO2-FixedLine
+  system: Fixed Line
   dependsOn:
-  - kind: API
-    name: CreateWorkOrderV3
+    - kind: API
+      name: CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
