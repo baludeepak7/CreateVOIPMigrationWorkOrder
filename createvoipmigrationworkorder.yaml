@@ -33,5 +33,6 @@ spec:
     - CreateWorkOrderV3
     - CreateEvent_V2
     - UpdateVOIPLineMigrationStatus
+    - GetVOIPLineMigrationDetails
   providesApis:
     - CreateVOIPMigrationWorkOrder
