@@ -30,6 +30,6 @@ spec:
   owner: Developer
   system: Fixed Line
   consumesApis:
-    - CreateWorkOrder_V3   
+    - CreateWorkOrderV3   
   providesApis:
     - CreateVOIPMigrationWorkOrder
