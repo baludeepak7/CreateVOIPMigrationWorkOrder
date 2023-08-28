@@ -1,26 +1,31 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: CreateVOIPMigrationWorkOrder
-  description: |
-    This is a technical service used to facilitate the Migration process (by creating a work order) for the customers from 'TDM' telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
+  name: CreateWorkOrderV3
+  description:  |
+    The CreateWorkOrder_V3 is part of the integration flow “Work Order Tracking & Management”.
 spec:
   type: openapi
   owner: Developer
-  lifecycle: demo
-  system: Fixed Line
+  lifecycle: production
   definition:
-    $text: https://github.com/baludeepak7/CreateVOIPMigrationWorkOrder/blob/main/createvoipmigrationworkorder.yaml
-
-    ---
+    $text: https://github.com/baludeepak7/CreateWorKorder_V3/blob/main/createworkorderv3.yaml
+    
+---
 
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: CreateVOIPMigrationWorkOrder
+  name: CreateWorkOrderV3
   description: |
-    This is a technical service used to facilitate the Migration process (by creating a work order) for the customers from 'TDM' telephony service to the Voice over Cable (VoC) service. It also updates the Customer Migration status in MIDAS after attempting to create the Migration Workorder.
+    The CreateWorkOrder_V3 is part of the integration flow “Work Order Tracking & Management”.
   annotations:
     gitlab.com/project-id: '48576071'
     sonarqube.org/project-key: com.binpipe.spboot:demo
-    backstage.io/techdocs-ref: dir: .
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: service
+  lifecycle: production
+  owner: Developer
+  providesApis:
+    - CreateWorkOrderV3
