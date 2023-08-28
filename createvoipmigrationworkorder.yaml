@@ -26,7 +26,6 @@ spec:
   owner: Developer
   system: Fixed Line
   dependsOn:
-    - kind: API
-      name: CreateWorkOrderV3
+- CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
