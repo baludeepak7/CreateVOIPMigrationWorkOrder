@@ -25,7 +25,5 @@ spec:
   lifecycle: demo
   owner: Developer
   system: Fixed Line
-  dependsOn:
-- api:CreateWorkOrderV3
   providesApis:
     - CreateVOIPMigrationWorkOrder
